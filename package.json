@@ -1,5 +1,5 @@
 {
-  "name": "EclipseAutoBump",
+  "name": "AutoBump",
   "version": "1.0.0",
   "description": "Скрипт для добавления бамп-очков",
   "main": "index.js",
