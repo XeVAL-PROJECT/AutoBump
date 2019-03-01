@@ -1,0 +1,12 @@
+{
+  "name": "EclipseAutoBump",
+  "version": "1.0.0",
+  "description": "Скрипт для добавления бамп-очков",
+  "main": "index.js",
+  "author": "vladciphersky",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "image-binary": "^1.0.0",
+    "rucaptcha-client": "^1.0.4"
+  }
+}
