@@ -7,7 +7,10 @@ var config =  {
   },
   bumpch      : "тут ID канала, где будет прописываться команда",
   bumpbot     : "315926021457051650",
-  bumpcommand : "!bump"
+  bumpcommand : "!bump",
+  sdhas       : "Ставьте 0, если нету бота Server-Discord.com. Иначе 1",
+  sdbot       : "464272403766444044",
+  sdcommand   : "s.up"
 };
 
 var Discord      = require('discord.js');
@@ -16,6 +19,7 @@ var Image        = require('image-binary');
 var rucaptcha    = require('rucaptcha-client').create(config.tokens.rucaptcha);
 
 function bump(bumpch, bumpcommand) {
+  if(config.sdhas === "1") client.channels.get(bumpch).send(config.sdcommand);
   client.channels.get(bumpch).send(bumpcommand);
 }
 
