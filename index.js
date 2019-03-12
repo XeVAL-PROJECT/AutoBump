@@ -7,10 +7,7 @@ var config =  {
   },
   bumpch      : "тут ID канала, где будет прописываться команда",
   bumpbot     : "315926021457051650",
-  bumpcommand : "!bump",
-  smode       : false, // выключено, включить - true
-  sbot        : "464272403766444044",
-  scommand    : "s.up"
+  bumpcommand : "!bump"
 };
 
 var Discord      = require('discord.js');
@@ -21,17 +18,10 @@ var rucaptcha    = require('rucaptcha-client').create(config.tokens.rucaptcha);
 function bump(bumpch, bumpcommand) {
   client.channels.get(bumpch).send(bumpcommand);
 }
-function sbump(bumpch, scommand) {
-
-  client.channels.get(bumpch).send(scommand);
-
-}
-
 
 client.on('ready', async () => {
   console.log('Бот запущен.')
   bump(config.bumpch, config.bumpcommand);
-  if(config.smode === true) return sbump(config.bumpch, config.scommand);
 });
 
 client.on('error', (err) => console.error(err));
