@@ -2,15 +2,15 @@
 
 var config =  {
   tokens      : {
-    discord   : "тут ваш токен Дискорд-бота | ОБЯЗАТЕЛЬНО ПОЛЬЗОВАТЕЛЯ, А НЕ БОТА | На GitHub вышла ошибка :D",
+    discord   : "тут ваш токен Дискорд | ОБЯЗАТЕЛЬНО ПОЛЬЗОВАТЕЛЯ, А НЕ БОТА",
     rucaptcha:  "тут ваш токен Рукапчи"
   },
   bumpch      : "тут ID канала, где будет прописываться команда",
   bumpbot     : "315926021457051650",
   bumpcommand : "!bump",
-  sdhas       : "Ставьте 0, если нету бота Server-Discord.com. Иначе 1",
-  sdbot       : "464272403766444044",
-  sdcommand   : "s.up"
+  smode       : false, // выключено, включить - true
+  sbot        : "464272403766444044",
+  scommand    : "s.up"
 };
 
 var Discord      = require('discord.js');
@@ -19,13 +19,19 @@ var Image        = require('image-binary');
 var rucaptcha    = require('rucaptcha-client').create(config.tokens.rucaptcha);
 
 function bump(bumpch, bumpcommand) {
-  if(config.sdhas === "1") client.channels.get(bumpch).send(config.sdcommand);
   client.channels.get(bumpch).send(bumpcommand);
 }
+function sbump(bumpch, scommand) {
+
+  client.channels.get(bumpch).send(scommand);
+
+}
+
 
 client.on('ready', async () => {
   console.log('Бот запущен.')
   bump(config.bumpch, config.bumpcommand);
+  if(config.smode === true) return sbump(config.bumpch, config.scommand);
 });
 
 client.on('error', (err) => console.error(err));
