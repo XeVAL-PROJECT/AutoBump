@@ -1,6 +1,6 @@
 # AutoBump
 
-Данный скрипт умеет загружать капчу от бота **[Server Monitoring](https://discord-server.com)** на сайт **[RuCaptcha](https://rucaptcha.com)**.
+Данный скрипт умеет загружать капчу от бота **[Server Monitoring](https://discord-server.com)** на сайт **[RuCaptcha](https://rucaptcha.com)**. [!] Не используется для ботов от [SDC](https://server-discord.com).
 
   - Загрузка изображения
   - Получение ответа на пример
@@ -15,7 +15,7 @@
 
 Автор: [https://me.sqdsh.top](https://me.sqdsh.top)
 
-Лицензия: [https://github.com/XeVAL-PROJECT/AutoBump/blob/master/LICENSE](https://github.com/XeVAL-PROJECT/AutoBump/blob/master/LICENSE)
+Лицензия: [https://github.com/vladciphersky/AutoBump/blob/master/LICENSE](https://github.com/XeVAL-PROJECT/AutoBump/blob/master/LICENSE)
 
 Загрузите файлы, перейдите в директорию, и установите модули.
 
