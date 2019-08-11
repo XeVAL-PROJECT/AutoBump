@@ -1,4 +1,4 @@
-# Discord-Server.com AutoBump
+# Discord-Server.com AutoBump [DEPRECATED]
 Данный скрипт умеет загружать капчу от бота **[Server Monitoring](https://discord-server.com)** на сайт **[RuCaptcha](https://rucaptcha.com)**.
 
 ## Установка
